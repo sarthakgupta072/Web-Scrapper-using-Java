@@ -15,7 +15,9 @@ Used to display the schedule of trains.
 
 * Clone this repository.
 
-* Go inside the TrainSchedule folder and open terminal there.
+* Go inside the TrainSchedule folder and open terminal there. 
+
+* If a JSON file is already present in the root folder, **delete it first**.
 
 Here the _TrainSchedule_ folder is the root folder. Go inside the folder and follow the given steps:
 
