@@ -45,7 +45,7 @@ public class TrainSchedule
         Element trainTable = document.getElementById("trnSchDataTbl");
         // System.out.println(trainTable);
         Elements tableContent = trainTable.getElementsByTag("tr");
-        // System.out.println(tableContent);
+        
         for (Element trs : tableContent) {
             JSONObject obj = new JSONObject();
             Elements tds = trs.getElementsByTag("td");
@@ -74,15 +74,17 @@ public class TrainSchedule
                 }
 
             }
+            /* try and catch block to handle all the errors
+                and forbid them from failing the code.*/
             try (FileWriter file = new FileWriter("./json.txt", true)) {
                 file.write(obj.toString(2));
                 // System.out.println("\nJSON Object: " + obj);
 
             } catch (Exception e) {
-                System.out.println("Hah\n");
+                System.out.println("Hah! Error encountered.\n");
             }
         }
-        System.out.println("Successfully Copied JSON Object to File...");
+        System.out.println("Successfully Copied JSON Object to the file!");
 
     }
 }
